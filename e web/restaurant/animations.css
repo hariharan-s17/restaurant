@@ -1,0 +1,332 @@
+/* ============================================
+   SAFFRON & SILK — ANIMATIONS
+   ============================================ */
+
+/* ============================================
+   REVEAL ANIMATIONS (Hero)
+   ============================================ */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: revealUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   SCROLL FADE IN
+   ============================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   CUISINE CARDS — STAGGER
+   ============================================ */
+.cuisine-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.cuisine-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cuisine-card:nth-child(1) { transition-delay: 0s; }
+.cuisine-card:nth-child(2) { transition-delay: 0.08s; }
+.cuisine-card:nth-child(3) { transition-delay: 0.16s; }
+.cuisine-card:nth-child(4) { transition-delay: 0.24s; }
+.cuisine-card:nth-child(5) { transition-delay: 0.32s; }
+.cuisine-card:nth-child(6) { transition-delay: 0.40s; }
+.cuisine-card:nth-child(7) { transition-delay: 0.48s; }
+.cuisine-card:nth-child(8) { transition-delay: 0.56s; }
+
+/* ============================================
+   MENU ITEMS — STAGGER
+   ============================================ */
+.menu-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease;
+}
+
+.menu-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu-item:nth-child(1) { transition-delay: 0s; }
+.menu-item:nth-child(2) { transition-delay: 0.1s; }
+.menu-item:nth-child(3) { transition-delay: 0.2s; }
+.menu-item:nth-child(4) { transition-delay: 0.3s; }
+
+/* ============================================
+   GALLERY ITEMS
+   ============================================ */
+.gallery-item {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.gallery-item.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gallery-item:nth-child(1) { transition-delay: 0s; }
+.gallery-item:nth-child(2) { transition-delay: 0.1s; }
+.gallery-item:nth-child(3) { transition-delay: 0.2s; }
+.gallery-item:nth-child(4) { transition-delay: 0.3s; }
+.gallery-item:nth-child(5) { transition-delay: 0.1s; }
+.gallery-item:nth-child(6) { transition-delay: 0.2s; }
+
+/* ============================================
+   STATS COUNT UP
+   ============================================ */
+.stat {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stat.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat:nth-child(1) { transition-delay: 0s; }
+.stat:nth-child(2) { transition-delay: 0.1s; }
+.stat:nth-child(3) { transition-delay: 0.2s; }
+.stat:nth-child(4) { transition-delay: 0.3s; }
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.about-visual {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-visual.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-text {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
+}
+
+.about-text.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   HERO SLIDE TRANSITIONS
+   ============================================ */
+.hero-slide {
+  transition: opacity 1.2s ease;
+}
+
+/* ============================================
+   NAV SCROLL ANIMATION
+   ============================================ */
+.nav {
+  transition: background 0.5s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+.nav.scrolled {
+  box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+}
+
+/* ============================================
+   FORM INPUT FOCUS
+   ============================================ */
+.form-input {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 2px rgba(201,169,110,0.15);
+}
+
+/* ============================================
+   BUTTON HOVER GLOW
+   ============================================ */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* ============================================
+   GOLD SHIMMER ON LOGO
+   ============================================ */
+.footer-logo,
+.preloader-logo {
+  background: linear-gradient(90deg, #C9A96E 0%, #F5E0A8 40%, #C9A96E 60%, #9B7D4A 100%);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+/* ============================================
+   TESTIMONIAL CARD ENTRANCE
+   ============================================ */
+.testimonial-card {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+/* ============================================
+   MOBILE MENU LINKS
+   ============================================ */
+.mob-link {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.mob-link::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  color: var(--gold);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu li {
+  overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.mobile-menu.open li {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.mobile-menu.open li:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu.open li:nth-child(2) { transition-delay: 0.15s; }
+.mobile-menu.open li:nth-child(3) { transition-delay: 0.2s; }
+.mobile-menu.open li:nth-child(4) { transition-delay: 0.25s; }
+.mobile-menu.open li:nth-child(5) { transition-delay: 0.3s; }
+.mobile-menu.open li:nth-child(6) { transition-delay: 0.35s; }
+
+/* ============================================
+   MARQUEE PAUSE ON HOVER
+   ============================================ */
+.marquee-strip:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   RESERVATION FORM SUCCESS ANIMATION
+   ============================================ */
+.form-success {
+  animation: successPop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes successPop {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ============================================
+   ABOUT IMAGE PARALLAX FRAME
+   ============================================ */
+.about-img {
+  transition: transform 0.3s ease;
+}
+
+.about-visual:hover .about-img {
+  transform: scale(1.02);
+}
+
+/* ============================================
+   SCROLL INDICATOR GLOW
+   ============================================ */
+.scroll-line {
+  box-shadow: 0 0 8px rgba(201,169,110,0.3);
+}
+
+/* ============================================
+   HERO SLIDE CONTENT ANIMATION (on active)
+   ============================================ */
+.hero-slide.active .slide-tag,
+.hero-slide.active .slide-title,
+.hero-slide.active .slide-sub,
+.hero-slide.active .btn-primary {
+  animation: slideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.hero-slide.active .slide-title { animation-delay: 0.1s; }
+.hero-slide.active .slide-sub { animation-delay: 0.2s; }
+.hero-slide.active .btn-primary { animation-delay: 0.3s; }
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initially hide slide content so animation fires */
+.hero-slide .slide-tag,
+.hero-slide .slide-title,
+.hero-slide .slide-sub,
+.hero-slide .btn-primary {
+  opacity: 0;
+}

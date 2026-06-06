@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAFFRON</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">SAFFRON & SAVOURIES</div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="nav-logo-text">S<em>&</em>S</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#cuisines" class="nav-link">Cuisines</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#about" class="nav-link">Our Story</a></li>
+      <li><a href="#contact" class="nav-link nav-cta">Reserve</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" class="mob-link">Home</a></li>
+      <li><a href="#cuisines" class="mob-link">Cuisines</a></li>
+      <li><a href="#menu" class="mob-link">Menu</a></li>
+      <li><a href="#gallery" class="mob-link">Gallery</a></li>
+      <li><a href="#about" class="mob-link">Our Story</a></li>
+      <li><a href="#contact" class="mob-link">Reserve a Table</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-slides" id="heroSlides">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=80')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <p class="slide-tag reveal-up">FINE DINING EXPERIENCE</p>
+          <h1 class="slide-title reveal-up delay-1">A <em>Journey</em><br/>of Flavours</h1>
+          <p class="slide-sub reveal-up delay-2">Six continents. One extraordinary table.</p>
+          <a href="#cuisines" class="btn-primary reveal-up delay-3">Explore Cuisines</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1800&q=80')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <p class="slide-tag">MASTER CHEFS</p>
+          <h1 class="slide-title">Art on<br/><em>Every Plate</em></h1>
+          <p class="slide-sub">Where tradition meets innovation.</p>
+          <a href="#menu" class="btn-primary">View Our Menu</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1800&q=80')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <p class="slide-tag">THE AMBIANCE</p>
+          <h1 class="slide-title">A World<br/><em>Awaits You</em></h1>
+          <p class="slide-sub">Intimate spaces. Unforgettable evenings.</p>
+          <a href="#contact" class="btn-primary">Reserve Your Table</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Controls -->
+    <div class="hero-controls">
+      <button class="slide-prev" id="slidePrev">&#8592;</button>
+      <div class="slide-dots" id="slideDots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button class="slide-next" id="slideNext">&#8594;</button>
+    </div>
+
+    <!-- Scroll Cue -->
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Italian</span><span class="dot-sep">✦</span>
+      <span>Japanese</span><span class="dot-sep">✦</span>
+      <span>Indian</span><span class="dot-sep">✦</span>
+      <span>French</span><span class="dot-sep">✦</span>
+      <span>Thai</span><span class="dot-sep">✦</span>
+      <span>Lebanese</span><span class="dot-sep">✦</span>
+      <span>Mexican</span><span class="dot-sep">✦</span>
+      <span>Mediterranean</span><span class="dot-sep">✦</span>
+      <span>Italian</span><span class="dot-sep">✦</span>
+      <span>Japanese</span><span class="dot-sep">✦</span>
+      <span>Indian</span><span class="dot-sep">✦</span>
+      <span>French</span><span class="dot-sep">✦</span>
+      <span>Thai</span><span class="dot-sep">✦</span>
+      <span>Lebanese</span><span class="dot-sep">✦</span>
+      <span>Mexican</span><span class="dot-sep">✦</span>
+      <span>Mediterranean</span><span class="dot-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- CUISINES SECTION -->
+  <section class="cuisines" id="cuisines">
+    <div class="section-header">
+      <p class="section-tag fade-in">OUR WORLD</p>
+      <h2 class="section-title fade-in">Eight Cuisines,<br/><em>Infinite Stories</em></h2>
+    </div>
+    <div class="cuisine-grid">
+      <div class="cuisine-card" data-cuisine="italian">
+        <div class="cuisine-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80')"></div>
+        <div class="cuisine-info">
+          <span class="cuisine-flag">🇮🇹</span>
+          <h3>Italian</h3>
+          <p>Handcrafted pastas, wood-fired pizzas & timeless classics from the heart of Italy.</p>
+          <a href="#menu" class="cuisine-link">Explore →</a>
+        </div>
+      </div>
+      <div class="cuisine-card" data-cuisine="japanese">
+        <div class="cuisine-img" style="background-image:url('https://images.unsplash.com/photo-1553621042-f6e147245754?w=800&q=80')"></div>
+        <div class="cuisine-info">
+          <span class="cuisine-flag">🇯🇵</span>
+          <h3>Japanese</h3>
+          <p>Omakase-inspired sushi, ramen & exquisite kaiseki plates from master craftsmen.</p>
+          <a href="#menu" class="cuisine-link">Explore →</a>
+        </div>
+      </div>
+      <div class="cuisine-card" data-cuisine="indian">
+        <div class="cuisine-img" style="background-image:url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80')"></div>
+        <div class="cuisine-info">
+          <span class="cuisine-flag">🇮🇳</span>
+          <h3>Indian</h3>
+          <p>Aromatic curries, tandoor-fired breads & royal Mughlai feasts with heritage spices.</p>
+          <a href="#menu" class="cuisine-link">Explore →</a>
+        </div>
+      </div>
+      <div class="cuisine-card" data-cuisine="french">
+        <div class="cuisine-img" style="background-image:url('https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80')"></div>
+        <div class="cuisine-info">
+          <span class="cuisine-flag">🇫🇷</span>
+          <h3>French</h3>
+          <p>Classic bistro elegance: coq au vin, soufflés & crème brûlée to perfection.</p>
+          <a href="#menu" class="cuisine-link">Explore →</a>
+        </div>
+      </div>
+      <div class="cuisine-card" data-cuisine="thai">
+        <div class="cuisine-img" style="background-image:url('https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80')"></div>
+        <div class="cuisine-info">
+          <span class="cuisine-flag">🇹🇭</span>
+          <h3>Thai</h3>
+          <p>Fragrant curries, pad thai & vibrant street flavours in an elevated setting.</p>
+          <a href="#menu" class="cuisine-link">Explore →</a>
+        </div>
+      </div>
+      <div class="cuisine-card" data-cuisine="mediterranean">
+        <div class="cuisine-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80')"></div>
+        <div class="cuisine-info">
+          <span class="cuisine-flag">🌍</span>
+          <h3>Mediterranean</h3>
+          <p>Sun-drenched mezze, grilled seafood & olive-kissed dishes from the coastal shores.</p>
+          <a href="#menu" class="cuisine-link">Explore →</a>
+        </div>
+      </div>
+      <div class="cuisine-card" data-cuisine="mexican">
+        <div class="cuisine-img" style="background-image:url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80')"></div>
+        <div class="cuisine-info">
+          <span class="cuisine-flag">🇲🇽</span>
+          <h3>Mexican</h3>
+          <p>Bold moles, handmade tortillas & ceviches bursting with citrus and chilli fire.</p>
+          <a href="#menu" class="cuisine-link">Explore →</a>
+        </div>
+      </div>
+      <div class="cuisine-card" data-cuisine="lebanese">
+        <div class="cuisine-img" style="background-image:url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80')"></div>
+        <div class="cuisine-info">
+          <span class="cuisine-flag">🇱🇧</span>
+          <h3>Lebanese</h3>
+          <p>Smoky hummus, slow-roasted lamb & a feast of mezze born from ancient hospitality.</p>
+          <a href="#menu" class="cuisine-link">Explore →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED MENU -->
+  <section class="menu" id="menu">
+    <div class="menu-bg-text">MENU</div>
+    <div class="section-header light">
+      <p class="section-tag fade-in">SIGNATURE DISHES</p>
+      <h2 class="section-title fade-in">Chef's <em>Favourites</em></h2>
+    </div>
+    <div class="menu-tabs" id="menuTabs">
+      <button class="tab-btn active" data-tab="starters">Starters</button>
+      <button class="tab-btn" data-tab="mains">Mains</button>
+      <button class="tab-btn" data-tab="desserts">Desserts</button>
+      <button class="tab-btn" data-tab="drinks">Drinks</button>
+    </div>
+    <div class="menu-panels">
+      <div class="menu-panel active" id="tab-starters">
+        <div class="menu-items">
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=400&q=80" alt="Burrata" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Whipped Burrata</h4><span class="price">₹ 890</span>
+              </div>
+              <p>Italian heritage tomatoes, basil oil, aged balsamic</p>
+              <span class="cuisine-badge">🇮🇹 Italian</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=400&q=80" alt="Edamame" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Tuna Tataki</h4><span class="price">₹ 1,290</span>
+              </div>
+              <p>Sesame crusted, ponzu, micro shiso, pickled ginger</p>
+              <span class="cuisine-badge">🇯🇵 Japanese</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80" alt="Samosa" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Gilded Samosa Chaat</h4><span class="price">₹ 650</span>
+              </div>
+              <p>Saffron chutney, pomegranate, spiced yoghurt foam</p>
+              <span class="cuisine-badge">🇮🇳 Indian</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400&q=80" alt="Mezze" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Levantine Mezze Plate</h4><span class="price">₹ 1,100</span>
+              </div>
+              <p>Hummus, baba ganoush, fattoush, warm pita, zaatar oil</p>
+              <span class="cuisine-badge">🇱🇧 Lebanese</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-panel" id="tab-mains">
+        <div class="menu-items">
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=400&q=80" alt="Pasta" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Black Truffle Tagliatelle</h4><span class="price">₹ 2,100</span>
+              </div>
+              <p>Hand-rolled egg pasta, périgord truffle, parmigiano</p>
+              <span class="cuisine-badge">🇮🇹 Italian</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80" alt="Ramen" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Tonkotsu Ramen</h4><span class="price">₹ 1,650</span>
+              </div>
+              <p>18-hour pork bone broth, chashu pork, soft egg, nori</p>
+              <span class="cuisine-badge">🇯🇵 Japanese</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&q=80" alt="Butter Chicken" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Royal Murgh Makhani</h4><span class="price">₹ 1,450</span>
+              </div>
+              <p>Tandoori chicken, slow-cooked tomato & butter masala</p>
+              <span class="cuisine-badge">🇮🇳 Indian</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=80" alt="Duck" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Duck Confit</h4><span class="price">₹ 2,450</span>
+              </div>
+              <p>Cassoulet, Puy lentils, cherry jus, haricots verts</p>
+              <span class="cuisine-badge">🇫🇷 French</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-panel" id="tab-desserts">
+        <div class="menu-items">
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=400&q=80" alt="Creme Brulee" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Vanilla Crème Brûlée</h4><span class="price">₹ 790</span>
+              </div>
+              <p>Madagascar vanilla, caramelised sugar, fresh berries</p>
+              <span class="cuisine-badge">🇫🇷 French</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80" alt="Mochi" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Matcha Mochi Trio</h4><span class="price">₹ 890</span>
+              </div>
+              <p>Ceremonial matcha, red bean, yuzu cream, black sesame</p>
+              <span class="cuisine-badge">🇯🇵 Japanese</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80" alt="Gulab Jamun" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Gulab Jamun Soufflé</h4><span class="price">₹ 850</span>
+              </div>
+              <p>Rose water, cardamom ice cream, pistachio crumble</p>
+              <span class="cuisine-badge">🇮🇳 Indian</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&q=80" alt="Tiramisu" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Classic Tiramisù</h4><span class="price">₹ 820</span>
+              </div>
+              <p>Savoiardi, espresso, mascarpone, dark chocolate snow</p>
+              <span class="cuisine-badge">🇮🇹 Italian</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-panel" id="tab-drinks">
+        <div class="menu-items">
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&q=80" alt="Cocktail" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Saffron Negroni</h4><span class="price">₹ 980</span>
+              </div>
+              <p>Gin, Campari, saffron vermouth, gold leaf, orange</p>
+              <span class="cuisine-badge">🍸 Signature</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&q=80" alt="Wine" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Barolo 2018</h4><span class="price">₹ 4,500</span>
+              </div>
+              <p>Piedmont DOCG, nebbiolo grape, aged 36 months in oak</p>
+              <span class="cuisine-badge">🇮🇹 Fine Wine</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&q=80" alt="Mocktail" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Rose Lychee Fizz</h4><span class="price">₹ 620</span>
+              </div>
+              <p>Rose syrup, lychee, lime foam, sparkling water, mint</p>
+              <span class="cuisine-badge">🌹 Mocktail</span>
+            </div>
+          </div>
+          <div class="menu-item fade-in">
+            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80" alt="Tea" />
+            <div class="menu-item-info">
+              <div class="menu-item-top">
+                <h4>Japanese Matcha Ceremony</h4><span class="price">₹ 750</span>
+              </div>
+              <p>Ceremonial grade matcha, hot or cold, wagashi sweet</p>
+              <span class="cuisine-badge">🇯🇵 Japanese</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery" id="gallery">
+    <div class="section-header">
+      <p class="section-tag fade-in">VISUAL FEAST</p>
+      <h2 class="section-title fade-in"><em>Gallery</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall" data-index="0">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Restaurant" />
+        <div class="gallery-overlay"><span>The Dining Room</span></div>
+      </div>
+      <div class="gallery-item" data-index="1">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Food" />
+        <div class="gallery-overlay"><span>Artful Plating</span></div>
+      </div>
+      <div class="gallery-item" data-index="2">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Bar" />
+        <div class="gallery-overlay"><span>The Bar</span></div>
+      </div>
+      <div class="gallery-item wide" data-index="3">
+        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=900&q=80" alt="Chef" />
+        <div class="gallery-overlay"><span>Our Chefs at Work</span></div>
+      </div>
+      <div class="gallery-item" data-index="4">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Pizza" />
+        <div class="gallery-overlay"><span>Wood-fired Perfection</span></div>
+      </div>
+      <div class="gallery-item tall" data-index="5">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80" alt="Sushi" />
+        <div class="gallery-overlay"><span>Omakase Table</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="about-visual">
+      <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&q=80" alt="Chef" class="about-img" />
+      <div class="about-badge">
+        <span class="badge-number">12</span>
+        <span class="badge-text">Years of<br/>Excellence</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-tag fade-in">OUR STORY</p>
+      <h2 class="section-title fade-in">Born from a<br/><em>Passion for</em><br/>the World</h2>
+      <p class="about-para fade-in">Founded in 2012 by Chef Aryan Mehta after 20 years cooking across Europe, Asia and the Americas, Saffron & Silk was born from a singular obsession: to bring the world's most beautiful flavours under one roof without compromise.</p>
+      <p class="about-para fade-in">Every cuisine is cooked by specialists trained in their native country. Our Italian chef hails from Bologna. Our Japanese chef spent 8 years in Tokyo under a Michelin-starred master. Every plate tells a story of origin, craft and love.</p>
+      <div class="about-stats">
+        <div class="stat fade-in"><span class="stat-num">8</span><span class="stat-label">World Cuisines</span></div>
+        <div class="stat fade-in"><span class="stat-num">14</span><span class="stat-label">Specialist Chefs</span></div>
+        <div class="stat fade-in"><span class="stat-num">200+</span><span class="stat-label">Dishes Crafted</span></div>
+        <div class="stat fade-in"><span class="stat-num">4.9</span><span class="stat-label">★ Rated</span></div>
+      </div>
+      <a href="#contact" class="btn-primary">Reserve Your Table</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-header light">
+      <p class="section-tag fade-in">WHAT GUESTS SAY</p>
+      <h2 class="section-title fade-in"><em>Stories</em> Shared</h2>
+    </div>
+    <div class="testimonial-slider" id="testimonialSlider">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <p class="quote">"The Japanese omakase here rivals anything I've had in Tokyo. And that Indian section? A revelation of spice and soul."</p>
+          <div class="reviewer"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="Guest" /><div><strong>Priya Sharma</strong><em>Food Critic, Mumbai</em></div></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">"We celebrated our anniversary here and the entire evening was cinematic. The French duck confit melted my heart. Booking again!"</p>
+          <div class="reviewer"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="Guest" /><div><strong>Rahul & Meera Nair</strong><em>Regular Guests</em></div></div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">"Having authentic Lebanese mezze alongside the finest Italian pasta in one sitting — this place is genuinely magical."</p>
+          <div class="reviewer"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="Guest" /><div><strong>Sofia Al Rashid</strong><em>Travel Blogger</em></div></div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="testimonial-nav">
+        <button id="tPrev">&#8592;</button>
+        <button id="tNext">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION / CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-left">
+      <p class="section-tag">RESERVATION</p>
+      <h2 class="section-title">Reserve Your<br/><em>Table Tonight</em></h2>
+      <div class="contact-info">
+        <div class="info-row"><span>📍</span><p>12, Nungambakkam High Road,<br/>Chennai, Tamil Nadu 600034</p></div>
+        <div class="info-row"><span>📞</span><p>+91 44 6600 8899</p></div>
+        <div class="info-row"><span>✉️</span><p>hello@saffronandsilk.com</p></div>
+        <div class="info-row"><span>🕐</span><p>Lunch: 12:00 PM – 3:30 PM<br/>Dinner: 7:00 PM – 11:30 PM</p></div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="reservation-form">
+        <h3>Book a Table</h3>
+        <div class="form-group">
+          <input type="text" placeholder="Your Full Name" class="form-input" />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" class="form-input" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="date" class="form-input" />
+          </div>
+          <div class="form-group">
+            <input type="time" class="form-input" />
+          </div>
+        </div>
+        <div class="form-group">
+          <select class="form-input">
+            <option value="" disabled selected>Number of Guests</option>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3–4 Guests</option>
+            <option>5–6 Guests</option>
+            <option>7+ (Private Dining)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-input">
+            <option value="" disabled selected>Preferred Cuisine</option>
+            <option>Italian</option>
+            <option>Japanese</option>
+            <option>Indian</option>
+            <option>French</option>
+            <option>Thai</option>
+            <option>Mediterranean</option>
+            <option>Mexican</option>
+            <option>Lebanese</option>
+            <option>Surprise Me!</option>
+          </select>
+        </div>
+        <button class="btn-submit" id="reserveBtn">Confirm Reservation</button>
+        <div class="form-success" id="formSuccess">🎉 Your table has been reserved! We'll confirm shortly.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2 class="footer-logo">SAFFRON <em>&</em> SILK</h2>
+        <p>A world of flavours, a lifetime of memories.</p>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Zomato</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="#cuisines">Cuisines</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">Our Story</a>
+        <a href="#contact">Reservations</a>
+      </div>
+      <div class="footer-links">
+        <h4>Cuisines</h4>
+        <a href="#">Italian</a>
+        <a href="#">Japanese</a>
+        <a href="#">Indian</a>
+        <a href="#">French</a>
+        <a href="#">Thai</a>
+        <a href="#">Mediterranean</a>
+      </div>
+      <div class="footer-links">
+        <h4>Visit Us</h4>
+        <p>12, Nungambakkam High Road<br/>Chennai, TN 600034</p>
+        <p>+91 44 6600 8899</p>
+        <p>hello@saffronandsilk.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Saffron & Silk. All Rights Reserved.</p>
+      <p>Crafted with passion for great food.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
